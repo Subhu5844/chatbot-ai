@@ -1,9 +1,9 @@
-from langchain_openai import ChatOpenAI
-from app.config import OPENAI_API_KEY
+from langchain_groq import ChatGroq
+from app.config import GROQ_API_KEY
 
 def get_llm():
-    return ChatOpenAI(
-        model="gpt-4o-mini",
+    return ChatGroq(
+        model="llama-3.1-8b-instant",
         temperature=0.7,
-        api_key=OPENAI_API_KEY
+        api_key=GROQ_API_KEY
     )
